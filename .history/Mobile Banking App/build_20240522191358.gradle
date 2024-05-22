@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
+apply plugin: 'base'
+
+base {
+    archivesName = 'my-app'
+}
+
+tasks.withType(Test) {
+    reports {
+        html.outputLocation = file("$buildDir/reports/tests")
+    }
+}

@@ -1,8 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
-    id 'kotlin-parcelize' // Add if you need Parcelize
 }
 
 android {
@@ -14,10 +14,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        // Enable View Binding
-        buildFeatures {
-            viewBinding true
-        }
     }
     buildTypes {
         release {
